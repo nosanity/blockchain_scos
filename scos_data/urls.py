@@ -9,4 +9,5 @@ urlpatterns = (
     url(r'^$', views.Frontage.as_view(), name='frontpage'),
     url(r'^login/$', LoginView.as_view(), name='login'),
     url(r'^logout/$', LogoutView.as_view(), name='log-out'),
+    url(r'^status/$', views.NodeStatusView.as_view(), name='node-status'),
 )

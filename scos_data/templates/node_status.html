@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+    {% if error %}
+        {{ error }}
+    {% else %}
+        <h2>{% blocktrans %}Количество нод: {{ nodes_count }}{% endblocktrans %}</h2>
+        <table class="table">
+            <tr>
+                <th>{% blocktrans %}Имя{% endblocktrans %}</th>
+                <th>{% blocktrans %}Статус{% endblocktrans %}</th>
+            </tr>
+            {% for row in state %}
+                <tr>
+                    <td>{{ row.name }}</td>
+                    <td>{{ row.state }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+{% endblock %}

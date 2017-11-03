@@ -126,6 +126,21 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static_col")
 
 LOGIN_REDIRECT_URL = 'frontpage'
 
+INFLUX_DATABASE_SETTINGS = {
+    'host': 'localhost',
+    'port': 8086,
+    'username': 'root',
+    'password': 'root',
+    'database': None,
+    'ssl': False,
+    'verify_ssl': False,
+    'timeout': None,
+    'retries': 3,
+    'use_udp': False,
+    'udp_port': 4444,
+    'proxies': None,
+}
+
 try:
     from .local_settings import *
 except ImportError:

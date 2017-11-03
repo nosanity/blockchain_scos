@@ -2,3 +2,4 @@ Django==1.11
 python-social-auth==0.3.6
 social-auth-app-django==1.2.0
 jsonfield==2.0.2
+influxdb==4.1.1
